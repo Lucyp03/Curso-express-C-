@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+g++ -Wall -c baseclass.cpp -o baseclass.o && g++ -Wall -c baseandderived.cpp -o baseandderived.o && g++ baseandderived.o baseclass.o -o baseandderived && ./baseandderived.exe -12.0 12.0 100 &&\
+gnuplot -e "set term pngcairo; set output 'plot.png'; plot 'makebase.dat' w lp lc rgb 'black' title 'baseclass', 'makederived.dat' w lp lc rgb 'black' title 'derivedclass'; set style line 2 lc rgb '#000004' pt 6 ps 1.5 lt 1 lw 5 # --- black"
+
