@@ -1,0 +1,12 @@
+baseandderived: baseclass.o baseandderived.o
+	g++ -Wall baseclass.o baseandderived.o -o baseandderived
+baseclass.o: baseclass.cpp baseclass.hpp
+	g++ -Wall -o baseclass.o -c baseclass.cpp
+
+baseandderived.o: baseandderived.cpp 
+	g++ -Wall -o baseandderived.o -c baseandderived.cpp
+
+.PHONY: clean
+clean:
+	rm *.o baseandderived
+
