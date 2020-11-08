@@ -1,0 +1,15 @@
+CC= g++
+CFLAGS= -Wall
+
+objects= baseandderived.o baseclass.o
+executable= baseandderived
+
+$(executable): $(objectos)
+	$(CC) $(CFLAGS) -o $(executable) $(objects)
+
+%.o: %.cpp
+	$(CC) $(CFLAGS) -o $@ -c $<
+
+.PHONY: clean
+clean:
+	rm $(objects) $(executable)
