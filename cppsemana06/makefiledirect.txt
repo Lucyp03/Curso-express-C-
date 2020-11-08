@@ -1,0 +1,9 @@
+parall: paralelo.o
+	g++ -Wall paralelo.o -o parall -fopenmp
+
+paralelo.o: paralelo.cpp
+	g++ -c paralelo.cpp -o paralelo.o -fopenmp
+
+.PHONY: clean
+clean:
+	rm *.o parall
