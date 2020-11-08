@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+g++ -Wall -c paralelo.cpp -o paralelo.o -fopenmp && g++ -Wall paralelo.o -o parall.exe -fopenmp && ./parall.exe 
+
