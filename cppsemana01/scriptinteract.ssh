@@ -1,3 +1,0 @@
-#!/usr/bin/bash
-
-g++ -Wall -c interactive.cpp -o interactive.o && g++ -Wall interactive.o -o interactive && ./interactive.exe
