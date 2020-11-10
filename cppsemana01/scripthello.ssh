@@ -1,3 +1,0 @@
-#!/usr/bin/bash
-
-g++ -Wall -c hello.cpp -o hello.o && g++ -Wall hello.o -o hello && ./hello.exe
