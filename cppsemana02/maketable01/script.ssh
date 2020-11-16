@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+g++ -Wall -o a01 table01.cpp && ./a01.exe &&\
+	gnuplot -e "set term pngcairo; set output 'plot01.png'; plot 'table01.dat' w lp lc rgb 'black' title 'f(x)=sen(x)*cos(x/3)'; set style line 2 lc rgb '#000004' pt 6 ps 1.5 lt 1 lw 5 # --- black"
+
